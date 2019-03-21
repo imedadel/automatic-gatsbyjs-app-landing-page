@@ -7,6 +7,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 // import blackIphone from "../images/black.png"
 
+import "@fortawesome/fontawesome-free/css/all.min.css"
+
 import configs from '../../site-config';
 
 // Styled Components
