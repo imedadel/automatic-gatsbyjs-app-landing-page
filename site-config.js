@@ -83,6 +83,7 @@ module.exports = {
   ],
   topbar_color: '#000000',
   topbar_transparency: 0.1,
+  header_background: 'rgba(0, 0, 0, 0.1)',
   topbar_title_color: '#ffffff',
   cover_overlay_color_rgba: 'rgba(54, 59, 61, 0.8)',
   cover_overlay_transparency: 0.8,

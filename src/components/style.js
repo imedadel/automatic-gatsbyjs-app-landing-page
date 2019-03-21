@@ -88,7 +88,7 @@ export default createGlobalStyle`
 
   .headerBackground {
     height: 115px;
-    background-color: rgba(${configs.topbar_color}, ${configs.topbar_transparency});
+    background-color: ${configs.header_background};
   }
 
   .container {

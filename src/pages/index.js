@@ -108,7 +108,7 @@ const IndexPage = ({ data }) => (
                       <div>
                           <span className="fa-stack fa-1x">
                               <i className="iconBack fas fa-circle fa-stack-2x"></i>
-                              <i className="iconTop fas fa-{ feature.fontawesome_icon_name } fa-stack-1x"></i>
+                              <i className={`iconTop fas fa-${ feature.fontawesome_icon_name } fa-stack-1x`}></i>
                           </span>
                       </div>
                       <div className="featureText">
