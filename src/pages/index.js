@@ -1,15 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+// import blackIphone from "../images/black.png"
 
 import configs from '../../site-config';
 
-const IndexPage = () => (
+// Styled Components
+
+// Components
+// const IphonePreview = ({ children }) => (
+//       <div className="iphonePreview">
+//         {children}
+//       </div>
+// )
+
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <div className="imageWrapper">
     <div className="headerBackground">
       <div className="container">
         <header>
@@ -23,7 +35,8 @@ const IndexPage = () => (
                   </clipPath>
                 </defs>
           </svg>
-              <img className="headerIcon" src={ configs.logo } alt="" />
+              {/* <img className="headerIcon" src={ data.placeholderImage.fluid } alt="" /> */}
+              <Img fluid={data.headerIcon.childImageSharp.fluid} className="headerIcon" />
             </div>
             <p className="headerName">{ configs.siteTitle }</p>
           </div>
@@ -45,12 +58,12 @@ const IndexPage = () => (
             </clipPath>
         </svg>
 
-              <div className="videoContainer hidden">
+              {/* <div className="videoContainer hidden">
                   <video className="screenvideo" autoPlay="autoplay" controls="controls">
                   </video>
-              </div>
+              </div> */}
 
-              <img className="iphoneScreen hidden" src="" alt="" />
+              <Img fluid={data.iphoneScreen.childImageSharp.fluid} className="iphoneScreen" />
 
               {/* {% include screencontent.html %} //TODO: Convert jQuery if to React */}
 
@@ -65,7 +78,7 @@ const IndexPage = () => (
                     </clipPath>
                 </defs>
             </svg>
-                  <img className="appIconLarge" src="{ configs.app_icon }" alt=""  />
+                  <Img fluid={data.appIconLarge.childImageSharp.fluid} className="appIconLarge" />
               </div>
               <div className="appNamePriceContainer">
                   <h1 className="appName">
@@ -84,7 +97,7 @@ const IndexPage = () => (
                   { configs.playstore_link &&
                       <a className="playStoreLink" href="/"><img className="playStore" src="assets/playstore.png" alt=""  /></a>
                   }
-                  <a className="appStoreLink" href="/"><img className="appStore" src="assets/appstore.png" alt="" /></a>
+                  <a className="appStoreLink" href="/"><Img fluid={data.appStore.childImageSharp.fluid} className="appStore" /></a>
               </div>
           </div>
           <div className="features">
@@ -113,7 +126,7 @@ const IndexPage = () => (
           }
         </div>
         <footer>
-          <p className="footerText">Made by {configs.your_link ? <a href="{ configs.your_link }">{ configs.your_name }</a> : `${ configs.your_name }`}{ configs.your_city && `in ${ configs.your_city }` }</p>
+          <p className="footerText">Made by {configs.your_link ? <a href="{ configs.your_link }">{ configs.your_name }</a> : `${ configs.your_name }`}{ configs.your_city && ` in ${ configs.your_city }` }</p>
           <div className="footerIcons">
 
             { configs.facebook_username &&
@@ -157,14 +170,48 @@ const IndexPage = () => (
           {/* {% include appstoreimages.html %} //TODO: Convert jQuery if to React */}
       </div>
     </div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    </div>
+    {/* <h1>Hi people</h1> */}
+    {/* <p>Welcome to your new Gatsby site.</p> */}
+    {/* <p>Now go build something great.</p> */}
+    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+        headerIcon: file(relativePath: { eq: "icon.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 50) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        appStore: file(relativePath: { eq: "appstore.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 220) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        iphoneScreen: file(relativePath: { glob: "screenshot/*.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 350) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        appIconLarge: file(relativePath: { eq: "icon.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 120) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+`
