@@ -20,14 +20,6 @@ import configs from "../../site-config"
 //       </div>
 // )
 
-const iphonePreviewColor = {
-  black: "data.iphonePreviewBlack.childImageSharp.fluid.src",
-  blue: "data.iphonePreviewBlue.childImageSharp.fluid.src",
-  coral: "data.iphonePreviewCoral.childImageSharp.fluid.src",
-  white: "data.iphonePreviewWhite.childImageSharp.fluid.src",
-  yellow: "data.iphonePreviewYellow.childImageSharp.fluid.src",
-}
-
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
