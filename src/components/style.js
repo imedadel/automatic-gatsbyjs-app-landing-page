@@ -74,15 +74,23 @@ export default createGlobalStyle`
   .imageWrapper {
     // Sets the background image in the header area
     height: 714px;
-    background: linear-gradient(
-        ${configs.cover_overlay_color_rgba},
-        ${configs.cover_overlay_color_rgba}
-      ),
-      url(${coverImage});
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    border-radius: 0px 0px 40px 40px;
+  }
+
+  .headerImage {
+    position: unset !important;
+    height: 0 !important;
+    display: block !important;
+    
+  }
+  .headerImage > div{
+    padding-bottom: 0 !important;
+  }
+  .headerImage img {
+    z-index: -1;
     border-radius: 0px 0px 40px 40px;
   }
 
@@ -319,7 +327,7 @@ export default createGlobalStyle`
 
   .iphonePreview {
     grid-area: p;
-    background-image: url(${iphonePreview[configs.device_color]});
+    // background-image: url(${iphonePreview[configs.device_color]});
     background-size: 400px auto;
     background-repeat: no-repeat;
     margin-top: 68px;
