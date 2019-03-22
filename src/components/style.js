@@ -1,18 +1,18 @@
-import { createGlobalStyle } from 'styled-components';
-import configs from '../../site-config';
-import coverImage from "../images/headerimage.png";
-import iphonePreviewBlack from "../images/black.png";
-import iphonePreviewWhite from "../images/white.png";
-import iphonePreviewCoral from "../images/coral.png";
-import iphonePreviewYellow from "../images/yellow.png";
-import iphonePreviewBlue from "../images/blue.png";
+import { createGlobalStyle } from "styled-components"
+import configs from "../../site-config"
+import coverImage from "../images/headerimage.png"
+import iphonePreviewBlack from "../images/black.png"
+import iphonePreviewWhite from "../images/white.png"
+import iphonePreviewCoral from "../images/coral.png"
+import iphonePreviewYellow from "../images/yellow.png"
+import iphonePreviewBlue from "../images/blue.png"
 
 const iphonePreview = {
-    black: iphonePreviewBlack,
-    blue: iphonePreviewBlue,
-    coral: iphonePreviewCoral,
-    white: iphonePreviewWhite,
-    yellow: iphonePreviewYellow
+  black: iphonePreviewBlack,
+  blue: iphonePreviewBlue,
+  coral: iphonePreviewCoral,
+  white: iphonePreviewWhite,
+  yellow: iphonePreviewYellow,
 }
 
 //TODO: Add HTML to GatsbyJS along with relevant components
@@ -552,4 +552,4 @@ export default createGlobalStyle`
   .hidden {
     display: none;
   }
-`;
+`
