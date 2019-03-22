@@ -20,6 +20,14 @@ import configs from "../../site-config"
 //       </div>
 // )
 
+const iphonePreviewColor = {
+  black: "data.iphonePreviewBlack.childImageSharp.fluid.src",
+  blue: "data.iphonePreviewBlue.childImageSharp.fluid.src",
+  coral: "data.iphonePreviewCoral.childImageSharp.fluid.src",
+  white: "data.iphonePreviewWhite.childImageSharp.fluid.src",
+  yellow: "data.iphonePreviewYellow.childImageSharp.fluid.src",
+}
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -71,7 +79,15 @@ const IndexPage = ({ data }) => (
             className="iphonePreview"
             style={{
               backgroundImage: `url(${
-                data.iphonePreview.childImageSharp.fluid.src
+                configs.device_color === "black"
+                  ? data.iphonePreviewBlack.childImageSharp.fluid.src
+                  : configs.device_color === "blue"
+                  ? data.iphonePreviewBlue.childImageSharp.fluid.src
+                  : configs.device_color === "coral"
+                  ? data.iphonePreviewCoral.childImageSharp.fluid.src
+                  : configs.device_color === "white"
+                  ? data.iphonePreviewWhite.childImageSharp.fluid.src
+                  : data.iphonePreviewYellow.childImageSharp.fluid.src
               })`,
             }}
           >
@@ -299,7 +315,35 @@ export const query = graphql`
         }
       }
     }
-    iphonePreview: file(relativePath: { eq: "black.png" }) {
+    iphonePreviewBlack: file(relativePath: { eq: "black.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    iphonePreviewBlue: file(relativePath: { eq: "blue.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    iphonePreviewCoral: file(relativePath: { eq: "coral.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    iphonePreviewWhite: file(relativePath: { eq: "white.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    iphonePreviewYellow: file(relativePath: { eq: "yellow.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
