@@ -136,8 +136,6 @@ const IndexPage = ({ data }) => (
                 configs.video_or_screenshot === "video" ? `hidden` : null
               }`}
             />
-
-            {/* {% include screencontent.html %} //TODO: Convert jQuery if to React */}
           </div>
           <div className="appInfo">
             <div className="appIconShadow">
@@ -259,13 +257,6 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
-    {/* <h1>Hi people</h1> */}
-    {/* <p>Welcome to your new Gatsby site.</p> */}
-    {/* <p>Now go build something great.</p> */}
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
