@@ -93,14 +93,32 @@ const IndexPage = ({ data }) => (
               </clipPath>
             </svg>
 
-            {/* <div className="videoContainer hidden">
-                    <video className="screenvideo" autoPlay="autoplay" controls="controls">
-                    </video>
-                </div> */}
+            <div
+              className={`videoContainer ${
+                configs.video_or_screenshot === "screenshot" ? `hidden` : null
+              }`}
+            >
+              <video
+                className="screenvideo"
+                autoPlay="autoplay"
+                controls="controls"
+              >
+                <source
+                  src={data.videoScreen.publicURL}
+                  type={`video/${
+                    data.videoScreen.extension === "mov"
+                      ? `mp4`
+                      : data.videoScreen.extension
+                  }`}
+                />
+              </video>
+            </div>
 
             <Img
               fluid={data.iphoneScreen.childImageSharp.fluid}
-              className="iphoneScreen"
+              className={`iphoneScreen ${
+                configs.video_or_screenshot === "video" ? `hidden` : null
+              }`}
             />
 
             {/* {% include screencontent.html %} //TODO: Convert jQuery if to React */}
@@ -259,6 +277,13 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    videoScreen: file(
+      extension: { ne: "txt" }
+      relativePath: { glob: "videos/*" }
+    ) {
+      publicURL
+      extension
     }
     appIconLarge: file(relativePath: { eq: "icon.png" }) {
       childImageSharp {
