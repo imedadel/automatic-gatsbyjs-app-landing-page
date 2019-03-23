@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "automatic-gatsbyjs-app-landing-page",
+  "description": "Automatically generate iOS app landing page using GatsbyJS",
+  "version": "1.0.0",
+  "author": "Imed Adel <aadelimed@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.27",
