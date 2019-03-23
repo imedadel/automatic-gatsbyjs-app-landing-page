@@ -1,15 +1,15 @@
-const path = require("path")
-
 module.exports = {
   appstore_link          : "https://imedadel.me",
   playstore_link         : "https://imedadel.me",
+  google_analytics_ID    : "UA-47311644-5",
   presskit_download_link : null,
   video_or_screenshot    : "screenshot",                                       // "screenshot" or "video"
+  app_url                : "https://agalp.imedadel.me",
+  path_prefix            : "/",
   app_name               : "AGALP",
   app_price              : "Free",
-  app_description        : "Write a short tagline for your app.",
+  app_description        : "Automatically generate GatsbyJS app landing pages.",
   app_keywords           : ["automatic", "gatsbyjs", "app", "landing page"],
-  enable_smart_app_banner: true,
   your_name              : "Imed Adel",
   your_link              : "https://imedadel.me",
   your_city              : "Sousse",
@@ -21,9 +21,9 @@ module.exports = {
   youtube_username       : null,
   features               : [
     {
-      title: "GitHub Pages Jekyll Theme",
+      title: "GitHub Pages GatsbyJS Starter",
       description:
-        "Designed for GitHub Pages. Fork. Edit _config.yml. Upload screenshot/video. Push to gh-pages branch. Voilá!",
+        "Designed for GitHub Pages and Netlify. Fork. Edit site-config.js. Upload screenshot/video. Push to gh-pages branch. Voilà!",
       fontawesome_icon_name: "magic",
     },
     {
@@ -39,38 +39,38 @@ module.exports = {
       fontawesome_icon_name: "play-circle",
     },
     {
-      title: "Automatic Icon and Metadata",
+      title: "Optimized Performance",
       description:
-        "Enter iOS app ID in the _config.yml file to automatically fetch app icon, price and App Store Link.",
+        "No need to worry about page performance or optimizing images and videos. Everything is already configured for the best performance possible!",
       fontawesome_icon_name: "sync",
     },
     {
       title: "Easy to Tweak",
       description:
-        "Tweak accent color, images, icons and transparency via the _config.yml file. No HTML/CSS needed.",
+        "Tweak accent color, images, icons and transparency via the site-config.js file. No HTML/CSS needed.",
       fontawesome_icon_name: "adjust",
     },
     {
       title: "Feature List",
       description:
-        "Add features (like this one) to your site via the _config.yml file. No HTML/CSS needed.",
+        "Add features (like this one) to your site via the site-config.js file. No HTML/CSS needed.",
       fontawesome_icon_name: "star",
     },
     {
-      title: "Smart App Banner",
-      description: "Display a smart app banner on iOS devices.",
+      title: "Deploy to Netlify",
+      description: "Easily deploy your GatsbyJS landing page to Netlify.",
       fontawesome_icon_name: "arrow-alt-circle-down",
     },
     {
       title: "Social Links",
       description:
-        "Easily add social media accounts and contact info in the footer via the _config.yml file. No HTML/CSS needed.",
+        "Easily add social media accounts and contact info in the footer via the site-config.js file. No HTML/CSS needed.",
       fontawesome_icon_name: "link",
     },
     {
       title: "FontAwesome Support",
       description:
-        "Pick custom Font Awesome icons for the feature list via the _config.yml file. No HTML/CSS needed.",
+        "Pick custom Font Awesome icons for the feature list via the site-config.js file. No HTML/CSS needed.",
       fontawesome_icon_name: "info-circle",
     },
   ],
@@ -96,10 +96,4 @@ module.exports = {
   social_icons_foreground_color : "#666666",
   social_icons_background_color : "#e6e6e6",
   footer_text_color             : "#666666",
-  pathPrefix                    : null,
-  logo                          : path.resolve(__dirname, "src/images/icon.png"),
-  social                        : {
-    twitter: `gatsbyjs`,
-    fbAppId: `966242223397117`,
-  },
 }

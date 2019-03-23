@@ -1,19 +1,5 @@
 import { createGlobalStyle } from "styled-components"
 import configs from "../../site-config"
-import coverImage from "../images/headerimage.png"
-import iphonePreviewBlack from "../images/black.png"
-import iphonePreviewWhite from "../images/white.png"
-import iphonePreviewCoral from "../images/coral.png"
-import iphonePreviewYellow from "../images/yellow.png"
-import iphonePreviewBlue from "../images/blue.png"
-
-const iphonePreview = {
-  black: iphonePreviewBlack,
-  blue: iphonePreviewBlue,
-  coral: iphonePreviewCoral,
-  white: iphonePreviewWhite,
-  yellow: iphonePreviewYellow,
-}
 
 //TODO: Add HTML to GatsbyJS along with relevant components
 export default createGlobalStyle`
@@ -327,7 +313,6 @@ export default createGlobalStyle`
 
   .iphonePreview {
     grid-area: p;
-    // background-image: url(${iphonePreview[configs.device_color]});
     background-size: 400px auto;
     background-repeat: no-repeat;
     margin-top: 68px;

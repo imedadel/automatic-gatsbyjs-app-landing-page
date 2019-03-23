@@ -86,34 +86,31 @@ const IndexPage = ({ data }) => (
                 />
               </clipPath>
             </svg>
+            {configs.video_or_screenshot === "video" && (
+              <div className="videoContainer">
+                <video
+                  className="screenvideo"
+                  autoPlay="autoplay"
+                  controls="controls"
+                >
+                  <source
+                    src={data.videoScreen.publicURL}
+                    type={`video/${
+                      data.videoScreen.extension === "mov"
+                        ? `mp4`
+                        : data.videoScreen.extension
+                    }`}
+                  />
+                </video>
+              </div>
+            )}
 
-            <div
-              className={`videoContainer ${
-                configs.video_or_screenshot === "screenshot" ? `hidden` : null
-              }`}
-            >
-              <video
-                className="screenvideo"
-                autoPlay="autoplay"
-                controls="controls"
-              >
-                <source
-                  src={data.videoScreen.publicURL}
-                  type={`video/${
-                    data.videoScreen.extension === "mov"
-                      ? `mp4`
-                      : data.videoScreen.extension
-                  }`}
-                />
-              </video>
-            </div>
-
-            <Img
-              fluid={data.iphoneScreen.childImageSharp.fluid}
-              className={`iphoneScreen ${
-                configs.video_or_screenshot === "video" ? `hidden` : null
-              }`}
-            />
+            {configs.video_or_screenshot === "screenshot" && (
+              <Img
+                fluid={data.iphoneScreen.childImageSharp.fluid}
+                className="iphoneScreen"
+              />
+            )}
           </div>
           <div className="appInfo">
             <div className="appIconShadow">
@@ -151,7 +148,7 @@ const IndexPage = ({ data }) => (
                 </a>
               )}
               {configs.appstore_link && (
-                <a className="appStoreLink" href="/">
+                <a className="appStoreLink" href={configs.appstore_link}>
                   <Img
                     fixed={data.appStore.childImageSharp.fixed}
                     className="appStore"
@@ -182,6 +179,7 @@ const IndexPage = ({ data }) => (
                   </div>
                 )
               }
+              return null
             })}
           </div>
           <footer>
@@ -196,7 +194,10 @@ const IndexPage = ({ data }) => (
             </p>
             <div className="footerIcons">
               {configs.facebook_username && (
-                <a href={`https://facebook.com/${configs.facebook_username}`}>
+                <a
+                  href={`https://facebook.com/${configs.facebook_username}`}
+                  aria-label="Facebook"
+                >
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-facebook fa-stack-1x" />
@@ -205,7 +206,10 @@ const IndexPage = ({ data }) => (
               )}
 
               {configs.twitter_username && (
-                <a href={`https://twitter.com/${configs.twitter_username}`}>
+                <a
+                  href={`https://twitter.com/${configs.twitter_username}`}
+                  aria-label="Twitter"
+                >
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-twitter fa-stack-1x" />
@@ -214,7 +218,10 @@ const IndexPage = ({ data }) => (
               )}
 
               {configs.github_username && (
-                <a href={`https://github.com/${configs.github_username}`}>
+                <a
+                  href={`https://github.com/${configs.github_username}`}
+                  aria-label="GitHub"
+                >
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-github fa-stack-1x" />
@@ -223,7 +230,7 @@ const IndexPage = ({ data }) => (
               )}
 
               {configs.email_address && (
-                <a href={`mailto:${configs.email_address}`}>
+                <a href={`mailto:${configs.email_address}`} aria-label="Email">
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fas fa-envelope fa-stack-1x" />
