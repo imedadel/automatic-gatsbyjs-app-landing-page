@@ -17,17 +17,28 @@
 ![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f6a6179736f6e312e706e67.png)
 ![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f736c6f72312e706e67.png)
 
+----
+
 🔧 Fork this repo
 
 📲 Upload video preview or screenshot
 
 🎨 Customise site in `site-config.js` (no HTML/CSS)
 
-✅ Deploy to Netlify
+✅ Deploy to Netlify!
+
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ImedAdel/automatic-gatsbyjs-app-landing-page)
 
-Or you can use this repo as a Gatsby Starter, configure `site-config.js`, run `npm run build`, and deploy the public repository to GitHub 🎉.
+----
+
+Or you can use this repo as a Gatsby Starter
+``
+gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
+npm run develop # or gatsby develop
+``
+
+Then, configure `site-config.js`, run `npm run build`, and deploy the public repository to GitHub 🎉.
 
 ## Credits
 - Based on [Automatic App Landing Page](https://github.com/emilbaehr/automatic-app-landing-page) by [Emil Baehr](https://emilbaehr.com/)
