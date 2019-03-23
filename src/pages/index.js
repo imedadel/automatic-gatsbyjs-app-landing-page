@@ -1,28 +1,17 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-// import blackIphone from "../images/black.png"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
 import configs from "../../site-config"
 
-// Styled Components
-
-// Components
-// const IphonePreview = ({ children }) => (
-//       <div className="iphonePreview">
-//         {children}
-//       </div>
-// )
-
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={configs.app_keywords} />
 
     <div
       className="imageWrapper"
@@ -32,7 +21,6 @@ const IndexPage = ({ data }) => (
         }),url(${data.headerImage.childImageSharp.fluid.src})`,
       }}
     >
-      {/* <Img fixed={data.headerImage.childImageSharp.fixed} className="headerImage" /> */}
       <div className="headerBackground">
         <div className="container">
           <header>
@@ -49,19 +37,18 @@ const IndexPage = ({ data }) => (
                     </clipPath>
                   </defs>
                 </svg>
-                {/* <img className="headerIcon" src={ data.placeholderImage.fluid } alt="" /> */}
                 <Img
                   fluid={data.headerIcon.childImageSharp.fluid}
                   className="headerIcon"
                 />
               </div>
-              <p className="headerName">{configs.siteTitle}</p>
+              <p className="headerName">{configs.app_name}</p>
             </div>
             <nav>
               <ul>
                 {configs.presskit_download_link && (
                   <li>
-                    <a href="{ configs.presskit_download_link }">Press Kit</a>
+                    <a href={configs.presskit_download_link}>Press Kit</a>
                   </li>
                 )}
               </ul>
@@ -83,7 +70,6 @@ const IndexPage = ({ data }) => (
               })`,
             }}
           >
-            {/* <Img fluid={data.iphonePreview.childImageSharp.fluid} className="" /> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 0 0"
@@ -157,20 +143,21 @@ const IndexPage = ({ data }) => (
             </div>
             <div className="downloadButtonsContainer">
               {configs.playstore_link && (
-                <a className="playStoreLink" href="/">
-                  <img
+                <a className="playStoreLink" href={configs.playstore_link}>
+                  <Img
+                    fixed={data.playStore.childImageSharp.fixed}
                     className="playStore"
-                    src="assets/playstore.png"
-                    alt=""
                   />
                 </a>
               )}
-              <a className="appStoreLink" href="/">
-                <Img
-                  fixed={data.appStore.childImageSharp.fixed}
-                  className="appStore"
-                />
-              </a>
+              {configs.appstore_link && (
+                <a className="appStoreLink" href="/">
+                  <Img
+                    fixed={data.appStore.childImageSharp.fixed}
+                    className="appStore"
+                  />
+                </a>
+              )}
             </div>
           </div>
           <div className="features">
@@ -201,7 +188,7 @@ const IndexPage = ({ data }) => (
             <p className="footerText">
               Made by{" "}
               {configs.your_link ? (
-                <a href="{ configs.your_link }">{configs.your_name}</a>
+                <a href={configs.your_link}>{configs.your_name}</a>
               ) : (
                 `${configs.your_name}`
               )}
@@ -209,7 +196,7 @@ const IndexPage = ({ data }) => (
             </p>
             <div className="footerIcons">
               {configs.facebook_username && (
-                <a href="https://facebook.com/{ configs.facebook_username }">
+                <a href={`https://facebook.com/${configs.facebook_username}`}>
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-facebook fa-stack-1x" />
@@ -218,7 +205,7 @@ const IndexPage = ({ data }) => (
               )}
 
               {configs.twitter_username && (
-                <a href="https://twitter.com/{ configs.twitter_username }">
+                <a href={`https://twitter.com/${configs.twitter_username}`}>
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-twitter fa-stack-1x" />
@@ -227,7 +214,7 @@ const IndexPage = ({ data }) => (
               )}
 
               {configs.github_username && (
-                <a href="https://github.com/{ configs.github_username }">
+                <a href={`https://github.com/${configs.github_username}`}>
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fab fa-github fa-stack-1x" />
@@ -235,8 +222,8 @@ const IndexPage = ({ data }) => (
                 </a>
               )}
 
-              {configs.email_address && ( //TODO: Convert jQuery if to React
-                <a href="mailto:{ configs.email_address }">
+              {configs.email_address && (
+                <a href={`mailto:${configs.email_address}`}>
                   <span className="fa-stack fa-1x">
                     <i className="socialIconBack fas fa-circle fa-stack-2x" />
                     <i className="socialIconTop fas fa-envelope fa-stack-1x" />
@@ -245,7 +232,7 @@ const IndexPage = ({ data }) => (
               )}
             </div>
           </footer>
-          {/* {% include appstoreimages.html %} //TODO: Convert jQuery if to React */}
+          {/*TODO: Add App Store API */}
         </div>
       </div>
     </div>
@@ -266,6 +253,13 @@ export const query = graphql`
     appStore: file(relativePath: { eq: "appstore.png" }) {
       childImageSharp {
         fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    playStore: file(relativePath: { eq: "playstore.png" }) {
+      childImageSharp {
+        fixed(height: 75) {
           ...GatsbyImageSharpFixed
         }
       }
