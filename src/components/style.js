@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import configs from "../../site-config"
 
-//TODO: Add HTML to GatsbyJS along with relevant components
 export default createGlobalStyle`
   html {
     font-size: 62.5%;
@@ -40,10 +39,6 @@ export default createGlobalStyle`
     color: ${configs.link_color};
     text-decoration: none;
   }
-
-  // Shadows
-  $drop-shadow: drop-shadow(0px 5px 10px rgba(#000, 0.1))
-    drop-shadow(0px 1px 1px rgba(#000, 0.2));
 
   // Various resets
   *,

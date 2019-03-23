@@ -1,15 +1,18 @@
 module.exports = {
-  appstore_link          : "https://imedadel.me",
-  playstore_link         : "https://imedadel.me",
-  google_analytics_ID    : "UA-47311644-5",
-  presskit_download_link : null,
-  video_or_screenshot    : "screenshot",                                       // "screenshot" or "video"
-  app_url                : "https://agalp.imedadel.me",
-  path_prefix            : "/",
-  app_name               : "AGALP",
-  app_price              : "Free",
-  app_description        : "Automatically generate GatsbyJS app landing pages.",
-  app_keywords           : ["automatic", "gatsbyjs", "app", "landing page"],
+  // App Info
+  appstore_link         : "https://imedadel.me",                                  // Enter App Store URL.
+  playstore_link        : "https://imedadel.me",                                  // Enter Google Play Store URL.
+  google_analytics_ID   : "UA-47311644-5",                                        // Enter Google Analytics ID or ""
+  presskit_download_link: "https://imedadel.me",                                  // Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
+  video_or_screenshot   : "screenshot",                                           // "screenshot" or "video"
+  app_url               : "https://agalp.imedadel.me",                            // Domain of your website without path_prefix.
+  path_prefix           : "/",                                                    // Prefixes all links. For cases when deployed to example.github.io/automatic-gatsbyjs-app-landing-page/.
+  app_name              : "AGALP",
+  app_price             : "Free",
+  app_description       : "Automatically generate GatsbyJS app landing pages.",
+  app_keywords          : ["automatic", "gatsbyjs", "app", "landing page"],
+
+  // Personal Info
   your_name              : "Imed Adel",
   your_link              : "https://imedadel.me",
   your_city              : "Sousse",
@@ -19,6 +22,8 @@ module.exports = {
   twitter_username       : "Imed_Adel",
   github_username        : "ImedAdel",
   youtube_username       : null,
+
+  // Features List
   features               : [
     {
       title: "GitHub Pages GatsbyJS Starter",
@@ -74,13 +79,10 @@ module.exports = {
       fontawesome_icon_name: "info-circle",
     },
   ],
-  topbar_color                  : "#000000",
-  topbar_transparency           : 0.1,
   header_background             : "rgba(0, 0, 0, 0.1)",
   topbar_title_color            : "#ffffff",
   cover_overlay_color_rgba      : "rgba(54, 59, 61, 0.8)",
-  cover_overlay_transparency    : 0.8,
-  device_color                  : "black",
+  device_color                  : "black",                          // Set to "black", "blue", "coral", "white", or "yellow"
   body_background_color         : "ffffff",
   primary_text_color            : "#000",
   content_width                 : "1170px",
