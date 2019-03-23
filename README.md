@@ -7,9 +7,12 @@
   Automatic GatsbyJS App Landing Page
 </h1>
 <p align="center">
-  Create and deploy an iOS app landing page on GitHub Pages and Netlify in a couple of minutes
-  
+  Create and deploy an iOS app landing page on GitHub Pages and Netlify in a couple of minutes<br><br>
+  <img alt="GitHub" src="https://img.shields.io/github/license/ImedAdel/automatic-gatsbyjs-app-landing-page.svg">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/ImedAdel/automatic-gatsbyjs-app-landing-page.svg">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/ImedAdel/automatic-gatsbyjs-app-landing-page.svg">
 </p>
+
 
 ![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f6a6179736f6e312e706e67.png)
 ![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f736c6f72312e706e67.png)
