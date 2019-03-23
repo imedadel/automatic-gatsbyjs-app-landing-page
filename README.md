@@ -11,6 +11,9 @@
   
 </p>
 
+![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f6a6179736f6e312e706e67.png)
+![Automatic GatsbyJS App Landing Page](https://raw.githubusercontent.com/ImedAdel/Mac-Arabic-Keyboard-for-Windows/master/68747470733a2f2f656d696c62616568722e636f6d2f66696c65732f736c6f72312e706e67.png)
+
 🔧 Fork this repo
 
 📲 Upload video preview or screenshot
