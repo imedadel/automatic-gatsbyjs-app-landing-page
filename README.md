@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -30,6 +31,8 @@
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ImedAdel/automatic-gatsbyjs-app-landing-page)
 
+----
+![Knowsby, a knowledge base using Markdown and GatsbyJS](https://raw.githubusercontent.com/ImedAdel/media/master/knowsbypub.png)
 ----
 
 Or you can use this repo as a Gatsby Starter
