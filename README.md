@@ -37,7 +37,7 @@
 
 Or you can use this repo as a Gatsby Starter
 ``
-gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
+gatsby new YourProjectName https://github.com/ImedAdel/automatic-gatsbyjs-app-landing-page
 npm run develop # or gatsby develop
 ``
 
