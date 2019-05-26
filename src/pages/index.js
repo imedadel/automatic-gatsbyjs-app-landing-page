@@ -271,7 +271,7 @@ export const query = graphql`
         }
       }
     }
-    iphoneScreen: file(relativePath: { glob: "screenshot/*.png" }) {
+    iphoneScreen: file(relativePath: { glob: "screenshot/*.{png,jpg}" }) {
       childImageSharp {
         fluid(maxWidth: 350) {
           ...GatsbyImageSharpFluid
