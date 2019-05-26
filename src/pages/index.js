@@ -205,6 +205,18 @@ const IndexPage = ({ data }) => (
                 </a>
               )}
 
+              {configs.linkedin_username && (
+                <a
+                  href={`https://www.linkedin.com/in/${configs.linkedin_username}`}
+                  aria-label="LinkedIn"
+                >
+                  <span className="fa-stack fa-1x">
+                    <i className="socialIconBack fas fa-circle fa-stack-2x" />
+                    <i className="socialIconTop fab fa-linkedin fa-stack-1x" />
+                  </span>
+                </a>
+              )}
+
               {configs.twitter_username && (
                 <a
                   href={`https://twitter.com/${configs.twitter_username}`}

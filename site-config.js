@@ -17,6 +17,7 @@ module.exports = {
   your_link              : "https://imedadel.me",
   your_city              : "Sousse",
   email_address          : "hello@imedadel.me",
+  linkedin_username      : null,
   facebook_username      : null,
   instagram_username     : "ed_adel",
   twitter_username       : "Imed_Adel",
