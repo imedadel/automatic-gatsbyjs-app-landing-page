@@ -32,7 +32,12 @@
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ImedAdel/automatic-gatsbyjs-app-landing-page)
 
 ----
-[![Knowsby, a knowledge base using Markdown and GatsbyJS](https://raw.githubusercontent.com/ImedAdel/media/master/knowsbypub.png)](https://knowsby.imedadel.me)
+<p align="center">
+  <a href="https://jamstack.studio">
+    <img alt="Jamstack Studio" src="https://raw.githubusercontent.com/ImedAdel/media/master/jamstack.studio_(Laptop%20with%20HiDPI%20screen).png" />
+  </a>
+</p>
+
 ----
 
 Or you can use this repo as a Gatsby Starter
