@@ -201,7 +201,7 @@ export default createGlobalStyle`
 
   .appIconShadow {
     display: flex;
-    filter: drop-shadow(0px 5px 10px rgba(#000, 0.1)) drop-shadow(0px 1px 1px rgba(#000, 0.2));
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
   }
 
   .appIconLarge {
@@ -272,7 +272,7 @@ export default createGlobalStyle`
   .downloadButtonsContainer {
     display: inline-block;
     margin-top: 42px;
-    filter: drop-shadow(0px 5px 10px rgba(#000, 0.1)) drop-shadow(0px 1px 1px rgba(#000, 0.2));
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
   }
 
   @media only screen and (max-width: 992px) {
