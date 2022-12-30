@@ -5,7 +5,7 @@
   "author": "Imed Adel <aadelimed@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.1.27",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.0.31",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "^2.0.22",
